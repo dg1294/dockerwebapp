@@ -3,7 +3,7 @@ node {
 	checkout scm
 	
 	docker.withRegistry('https://registry.hub.docker.com', 'dockerHub'){
-		def customImage = docker.build ("my-image:${webapp}")
+		def customImage = docker.build ("dg1294:${webapp}")
 
 		customImage.push()
      }
